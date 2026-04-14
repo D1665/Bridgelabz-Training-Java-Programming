@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Palindrome {
+
+    static boolean check1(String s) {
+        int i = 0, j = s.length() - 1;
+
+        while (i < j) {
+            if (s.charAt(i) != s.charAt(j)) return false;
+            i++;
+            j--;
+        }
+        return true;
+    }
+
+    static boolean check2(String s, int i, int j) {
+        if (i >= j) return true;
+        if (s.charAt(i) != s.charAt(j)) return false;
+        return check2(s, i + 1, j - 1);
+    }
+
+    static String reverse(String s) {
+        String res = "";
+        for (int i = s.length() - 1; i >= 0; i--) {
+            res += s.charAt(i);
+        }
+        return res;
+    }
+
+    static boolean check3(String s) {
+        String rev = reverse(s);
+        return s.equals(rev);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine();
+
+        System.out.println(check1(s));
+        System.out.println(check2(s, 0, s.length() - 1));
+        System.out.println(check3(s));
+    }
+}
