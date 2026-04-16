@@ -4,7 +4,7 @@ public class GuessGame {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        // Generate a random number between 1 and 100
         int number = (int)(Math.random() * 100);
         int guess = 0;
         int count = 0;
