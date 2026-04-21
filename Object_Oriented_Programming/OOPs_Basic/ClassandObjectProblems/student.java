@@ -1,4 +1,4 @@
-package Object_Oriented_Programming.OOPs_Basic;
+package Object_Oriented_Programming.OOPs_Basic.ClassandObjectProblems;
 public class student{
     int name;
     int id;

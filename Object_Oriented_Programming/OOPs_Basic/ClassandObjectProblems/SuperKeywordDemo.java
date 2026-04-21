@@ -1,4 +1,4 @@
-package Object_Oriented_Programming.OOPs_Basic;
+package Object_Oriented_Programming.OOPs_Basic.ClassandObjectProblems;
 // Parent class
 class Animal {
     String name = "Animal";  // Parent variable
