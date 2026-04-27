@@ -16,7 +16,7 @@ abstract class Vehicle {
 
 // 🔷 Interface (100% abstraction)
 interface GPS {
-    void showLocation();
+    abstract void showLocation();
 }
 
 // 🔷 Child Class

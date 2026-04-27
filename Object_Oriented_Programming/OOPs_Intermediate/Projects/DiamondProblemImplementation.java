@@ -1,5 +1,4 @@
 package Object_Oriented_Programming.OOPs_Intermediate.Projects;
-
 // 🔷 STEP 1: Base Class
 class A {
     void show() {
