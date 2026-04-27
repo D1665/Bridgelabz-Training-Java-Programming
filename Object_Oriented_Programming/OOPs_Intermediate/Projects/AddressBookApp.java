@@ -1,82 +1,62 @@
 package Object_Oriented_Programming.OOPs_Intermediate.Projects;
 
+import java.util.ArrayList;
+import java.util.Scanner;
 
-import java.util.*;
-
-// Person class
-class Person {
+// Contact class
+class Contact {
     String name;
     String phone;
 
-    Person(String name, String phone) {
+    Contact(String name, String phone) {
         this.name = name;
         this.phone = phone;
     }
 
-    public String toString() {
-        return name + " - " + phone;
-    }
-
-    // Avoid duplicate based on phone
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (!(obj instanceof Person)) return false;
-
-        Person p = (Person) obj;
-        return this.phone.equals(p.phone);
+    void display() {
+        System.out.println("Name: " + name + ", Phone: " + phone);
     }
 }
 
-// Address Book
-class AddressBook {
-    List<Person> list = new ArrayList<>();
-
-    void addPerson(Person p) {
-        if (!list.contains(p)) {
-            list.add(p);
-        } else {
-            System.out.println("Duplicate entry not allowed!");
-        }
-    }
-
-    void deletePerson(String phone) {
-        list.removeIf(p -> p.phone.equals(phone));
-    }
-
-    void searchPerson(String name) {
-        for (Person p : list) {
-            if (p.name.equalsIgnoreCase(name)) {
-                System.out.println(p);
-            }
-        }
-    }
-
-    void sortByName() {
-        list.sort(Comparator.comparing(p -> p.name));
-    }
-
-    void displayAll() {
-        for (Person p : list) {
-            System.out.println(p);
-        }
-    }
-}
-
-// Main
+// Main class
 public class AddressBookApp {
     public static void main(String[] args) {
-        AddressBook ab = new AddressBook();
 
-        ab.addPerson(new Person("Dinesh", "111"));
-        ab.addPerson(new Person("Rahul", "222"));
-        ab.addPerson(new Person("Dinesh", "111")); // duplicate
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Contact> list = new ArrayList<>();
 
-        ab.displayAll();
+        while (true) {
+            System.out.println("\n1. Add  2. View  3. Exit");
+            System.out.print("Enter choice: ");
+            int ch = sc.nextInt();
+            sc.nextLine();
 
-        ab.searchPerson("Rahul");
+            if (ch == 1) {
+                System.out.print("Enter name: ");
+                String name = sc.nextLine();
 
-        ab.sortByName();
-        System.out.println("\nAfter Sorting:");
-        ab.displayAll();
+                System.out.print("Enter phone: ");
+                String phone = sc.nextLine();
+
+                list.add(new Contact(name, phone));
+                System.out.println("Contact Added!");
+
+            } else if (ch == 2) {
+                if (list.isEmpty()) {
+                    System.out.println("No contacts!");
+                } else {
+                    for (Contact c : list) {
+                        c.display();
+                    }
+                }
+
+            } else if (ch == 3) {
+                System.out.println("Exit...");
+                break;
+
+            } else {
+                System.out.println("Invalid choice!");
+            }
+        }
     }
 }
