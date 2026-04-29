@@ -1,6 +1,5 @@
 package Object_Oriented_Programming.Review;
 
-import java.util.ArrayList;
 
 abstract class DeliveryOrder {
     private int orderId;
@@ -36,9 +35,7 @@ abstract class DeliveryOrder {
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
-        if (!(obj instanceof DeliveryOrder)) return false;
-        DeliveryOrder other = (DeliveryOrder) obj;
-        return this.orderId == other.orderId;
+        return false;
     }
 }
 
@@ -153,4 +150,4 @@ public class OrderDeliverySystem {
 
         System.out.println("Are orders equal? " + o1.equals(o2));
     }
-}
+} 
