@@ -8,6 +8,7 @@ class stack{
     void push(int data){
         if(top==2){
             System.out.println("Stack overflow");
+            return;
 
         }
         else{
@@ -19,6 +20,7 @@ class stack{
     void pop(){
         if(top==-1){
             System.out.println("Stack underflow");
+            return;
         }
         else{
 
