@@ -1,8 +1,9 @@
-package DataStructureandAlgorithm.Data_Structure;
+package Collections;
 
 import java.util.Stack;
 
 public class BalancedParentheses {
+
     static boolean isBalanced(String expr) {
         Stack<Character> stack = new Stack<>();
         for (char ch : expr.toCharArray()) {
@@ -21,8 +22,23 @@ public class BalancedParentheses {
     }
 
     public static void main(String[] args) {
-        String[] tests = { "{[()]}", "{[(])}", "((()))", "{[}", "()" };
-        for (String t : tests)
-            System.out.println(t + " -> " + (isBalanced(t) ? "Balanced" : "Not Balanced"));
+        String[] testCases = {
+            "{[()]}",
+            "{[(])}",
+            "((()))",
+            "{[}",
+            "()",
+            "",
+            "{{{}}}",
+            "([)]"
+        };
+
+        System.out.printf("%-20s %s%n", "Expression", "Result");
+        System.out.println("-".repeat(35));
+        for (String t : testCases) {
+            String display = t.isEmpty() ? "(empty)" : t;
+            System.out.printf("%-20s %s%n", display,
+                isBalanced(t) ? "✓ Balanced" : "✗ Not Balanced");
+        }
     }
 }
