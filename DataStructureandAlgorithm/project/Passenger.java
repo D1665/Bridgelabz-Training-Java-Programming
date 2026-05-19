@@ -1,4 +1,4 @@
-package DataStructureandAlgorithm.review.project;
+package DataStructureandAlgorithm.project;
 
 public class Passenger {
 

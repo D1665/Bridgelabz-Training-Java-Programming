@@ -1,4 +1,4 @@
-package DataStructureandAlgorithm.Data_Structure;
+package DataStructureandAlgorithm.Data_Structure.Linkedlist;
 
 import java.util.*;
 

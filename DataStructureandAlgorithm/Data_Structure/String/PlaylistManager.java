@@ -1,4 +1,4 @@
-package DataStructureandAlgorithm.Data_Structure;
+package DataStructureandAlgorithm.Data_Structure.String;
 
 public class PlaylistManager {
     static class Song {

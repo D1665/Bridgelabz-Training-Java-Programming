@@ -1,4 +1,4 @@
-package DataStructureandAlgorithm.Data_Structure;
+package DataStructureandAlgorithm.Data_Structure.StackAndQueue;
 
 import java.util.LinkedList;
 import java.util.Queue;
