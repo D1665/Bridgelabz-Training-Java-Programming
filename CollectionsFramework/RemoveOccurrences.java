@@ -1,4 +1,4 @@
-package Collections;
+package CollectionsFramework;
 public class RemoveOccurrences {
 
     static class Node {

@@ -1,4 +1,4 @@
-package Collections;
+package CollectionsFramework;
 
 import java.io.*;
 import java.util.*;
