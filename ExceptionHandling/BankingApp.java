@@ -1,4 +1,4 @@
-package Exception;
+package ExceptionHandling;
 
 // Custom checked exception for insufficient balance
 class InsufficientBalanceException extends Exception {

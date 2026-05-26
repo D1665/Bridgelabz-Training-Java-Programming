@@ -1,4 +1,4 @@
-package CollectionsFramework;
+package ExceptionHandling;
 
 import java.util.HashMap;
 import java.util.Map;

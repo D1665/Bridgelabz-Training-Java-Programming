@@ -1,4 +1,4 @@
-package Exception;
+package ExceptionHandling;
 
 public class InputValidationException extends RuntimeException {
 

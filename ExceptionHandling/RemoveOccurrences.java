@@ -1,4 +1,4 @@
-package CollectionsFramework;
+package ExceptionHandling;
 public class RemoveOccurrences {
 
     static class Node {
