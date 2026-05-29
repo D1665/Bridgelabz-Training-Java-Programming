@@ -1,8 +1,7 @@
 package Regex;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.regex.*;
 
 public class EmailAddressValidation {
 
@@ -10,7 +9,8 @@ public class EmailAddressValidation {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter your Email address: ");
         String email=sc.nextLine();
-        Pattern p = Pattern.compile("[A-Za-z0-9+_.-]+@(.+)$");
+        String regex="^[a-zA-Z0-9$_.]+@[a-zA-Z0-9_]+\\.[a-zA-Z]{2,}$";
+        Pattern p = Pattern.compile(regex);
         Matcher m=p.matcher(email);
         if(m.matches()){
             System.out.println("Your Email address is Correct!");
