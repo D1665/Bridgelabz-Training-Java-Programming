@@ -6,6 +6,7 @@ public class main {
         //first way is traditional way that create seprate class then implement the interface then create object of 
         // this class in main class 
         myInterface mi=new myinterfaceImp();
+      
         mi.sayHello();
 
         //second way is using anonymous class that create direct object of interface in main class using anonymous class so no need
